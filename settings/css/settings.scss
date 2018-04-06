@@ -1277,6 +1277,9 @@ doesnotexist:-o-prefocus, .strengthify-wrapper {
 			grid-template-columns: 44px;
 			grid-auto-columns: min-content;
 			border-top: $color-border 1px solid;
+			&.disabled {
+				opacity: .5;
+			}
 			.name,
 			.displayName,
 			.password {
@@ -1351,6 +1354,7 @@ doesnotexist:-o-prefocus, .strengthify-wrapper {
 						left: 2px;
 						bottom: 2px;
 						height: 3px;
+						z-index: 5; /* above multiselect */
 					}
 				}
 				.icon-confirm {
@@ -1368,6 +1372,9 @@ doesnotexist:-o-prefocus, .strengthify-wrapper {
 					margin: 6px;
 					img {
 						display: block;
+					}
+					&.icon-loading > img {
+						display: none;
 					}
 				}
 				.toggleUserActions {
@@ -1407,6 +1414,7 @@ doesnotexist:-o-prefocus, .strengthify-wrapper {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			grid-row-start: span 4;
 		}
 		.users-list-end {
 			opacity: .5;
